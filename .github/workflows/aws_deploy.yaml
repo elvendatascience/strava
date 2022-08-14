@@ -3,11 +3,12 @@ name: "Deploy"
 on:
   push:
     branches: [main]
+
 jobs:
   build:
-     name: Configure AWS Credentials
-     runs-on: ubuntu-latest
-     steps:
+    name: Configure AWS Credentials
+    runs-on: ubuntu-latest
+    steps:
     - name: Authenticate
       uses: aws-actions/configure-aws-credentials@v1
       with:
