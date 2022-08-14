@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     name: Configure AWS Credentials
+    runs-on: ubuntu-latest
     uses: aws-actions/configure-aws-credentials@v1
     with:
       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
