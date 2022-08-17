@@ -6,16 +6,16 @@ on:
 
 jobs:
   build:
-    name: Configure AWS Credentials
+    name: Test AWS Commands
     runs-on: elven-data-science
     steps:
-    - name: Authenticate
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        aws-region: us-east-1
+    # - name: Authenticate
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+    #     aws-region: us-east-1
     - name: Who Am I
       run: |
         aws sts get-caller-identity
