@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Configure AWS Credentials
-    runs-on: ubuntu-latest
+    runs-on: elven-data-science
     steps:
     - name: Authenticate
       uses: aws-actions/configure-aws-credentials@v1
